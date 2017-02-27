@@ -30,6 +30,7 @@
 - LSB, plans couleur (stegsolve, steganabara pour une première approche, sinon outil maison).
 - Pour le LSB utiliser zsteg : "zsteg imagefile" et sinon "zsteg imagefile -o ALL"
 - Si l'image contient un texte, regarder si certaines lettres (ou mots) ne sont pas marqués (auquel cas les conserver uniquement)
+- Extraire (par exemple pour les jpg) le thumbnail et l'examiner (voire le thumbnail du thumbnail...). Utiliser par exemple exiftool: http://owl.phy.queensu.ca/~phil/exiftool/examples.html
 - Si c'est un png, regarder s'il n'y a pas des chunks inutilisés (qui contiendraient un autre fichier)
 - Si c'est un bmp (par exemple), regarder si la taille de l'image correspond à ce qui est indiqué dans le header (x*y*nbc couleurs). Le header a p-e ete trafique pour masquer une partie de l'image
 

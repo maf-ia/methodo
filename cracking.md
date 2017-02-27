@@ -81,8 +81,15 @@ for i in `seq 100 10 600`; do echo "Tentative $i"; ./exploit $i 120; done
     
 ### Exploit d'application
 
-- Détection des failles via source code scanner : rats, flawfinder, pscan
-- Format string :
+#### Détection des failles via source code scanner : rats, flawfinder, pscan
+####- Format string :
+- %08X : affiche la stack par 4 octets
+- %s : affiche la valeur pointée par l'adresse en mémoire, on peut alterner des %x et %s car si ce que pointe %s est hors zone, ca crashe
+- %n : écrit le nombre de caractères déjà affichés, à l'adresse pointée
+Generalement si on met suffisamment de %x on arrive à pointer le début de la chaîne qu'on vient d'entrer et donc si on a bien choisi les valeurs, cela permet de pointer où on veut.
+- Si on ne veut pas mettre les premiers %x, on peut utiliser pour le %n : %5$n (saute à la 5ème valeur pointée)
+- %XXXXd. Cela génère un entier de taille XXXX (mais on ne peut pas mettre de valeurs trop grandes)
+- %hn : comme %n mais écrit des valeurs de 2 octets (on doit donc écraser une adresse en 2 fois (en décalat de 2)
 
 
 ### [Cracking d'appli Android](android.html)

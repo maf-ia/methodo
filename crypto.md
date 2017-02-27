@@ -5,6 +5,10 @@
 
 ## Crypto
 
+### Generalites
+
+- Time Attack : Le but d’une timing attack est de comparer les temps de réponse pour en déduire les valeurs des clés car les traitements ne sont pas les mêmes que ce soit ok ou pas.
+
 ### [Messages](crypto-messages.html)
 
 ### DES
@@ -63,22 +67,7 @@ factor(xxx)
 #### Cracker par XOR
 Outre le bf facile à coder, on peut utiliser xortool.py pour détecter les tailles probables, voir attaquer le fichier pour ces tailles
 
-### Cracker un code
 
-#### Code composé uniquement de lettres
-
-- Cesar
-- Vigenere/Rozier/Gronsfeld
-- Vernam
-- Atbash (chiffre miroir)
-- Albam (ROT13)
-- Atbah
-
-
-#### Code composé uniquement de chiffres
-
-- Carré de Polybe : coordonnées dans grille 5x5 en général mais on peut imaginer 6x6
-- Chiffre des nihilistes : surchiffrement du carré avec une clé à additionner, finalement pas beaucoup plus complexe
 
 
 

@@ -23,3 +23,9 @@ Cartes à jouer : as, 2, 3
 
 ### Jeu de la vie
 Il existe notamment golly comme simulateur, qui propose n variantes, on peut hooker ne python, etc...
+
+### Escape Room
+- Bien fouiller : les faux-fonds/double-fond, derriere les poignées, retourner les objets, au niveau des charnières (meme dans coffres)
+- Associer les couleurs
+- Nombre romains
+- Lampe UV

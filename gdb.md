@@ -5,6 +5,9 @@
 
 ### gdb
 
+https://betterexplained.com/articles/debugging-with-gdb/
+
+
 run : lance le programme
 start : commence l'exécution et s'arrête au debut du main si present 
 
@@ -21,6 +24,7 @@ Si plein sigtrap : handle SIGTRAP noprint nostop
 
 
 --- Afficher code à exécuter ---
+
 x/14i $pc  => 14 prochaines instructions
 
 Prochaine instruction 'ni'
@@ -30,8 +34,11 @@ Prochaine instruction 'ni'
 info reg 
 
 print /x $REG 	: 	affiche le contenu du registre REG en hexadécimal
+
 print /t $REG 	: 	affiche le contenu du registre REG en binaire
+
 print /c $REG 	: 	affiche le contenu du registre REG sous forme de caractère
+
 print /a $REG 	: 	affiche le contenu du registre REG sous forme d'adresse
 
 
