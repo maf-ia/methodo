@@ -39,6 +39,9 @@ Mettre -o xxx pour un fichier de sortie...
 aapt d xmltree apk_file_name res/layout/activity_main.xml
 (can be found in android-sdk-dir/build-tools)
 
+* ClassyShark
+Cet outil permet d'analyser les apk (avec GUI), et notamment les AndroidManifest.xml
+
 * Desassemlage smali 
 java -jar ~/Documents/root-me/Android/smali/baksmali-1.4.2.jar -o . classes.dex
 
