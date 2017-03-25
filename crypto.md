@@ -17,9 +17,7 @@
 ### GOST
 - Version russe du DES
 
-### Attaque RSA
-- Factoriser la clé, via le site [factordb](http://factordb.com/)
-- Utiliser msieve (cf outils ci dessous)
+### [Attaque RSA](crypto-rsa.html)
 
 ### Outils
 #### fcrackzip
@@ -43,19 +41,14 @@ Longueur : -l 1-4 (par exemple)
 "-a" méthode d'attaque (3=bruteforce)
 "?l?u" les patterns de bf
 
-#### John the Ripper's Usage Examples
-
-##### Utilisation sous Linux :
-
-##### Utilisation sous Windows :
-
+#### John the Ripper
+$ john xxx
 [Doc plus complete](crypto-john.html)
 
 #### msieve
 Pour décomposer des (assez) grands nombres en facteurs premiers. Peut utiliser CUDA
 $ msieve xxx
 => Lire le fichier .log pour la réponse
-
 
 #### yafu
 Pour décomposer des grands nombres en facteurs premiers.

@@ -3,7 +3,7 @@
 </head>
 [Crypto](crypto.html)
 
-##Composés de chiffres uniquement
+## Composés de chiffres uniquement
 - Numéro de la lettre dans l'alphabet
 - Code ascii
 - Lettre du clavier téléphonique : soit répétée autant que nécessaire, soit juste une valeur pour chaque lettre d'un groupe (plus dur)
@@ -12,7 +12,7 @@
 - Table périodique des éléments
 
 
-##Composés de lettres uniquement
+## Composés de lettres uniquement
 - Playfair (surtout si regroupé par 2)
 - Substitution
 - Railfence

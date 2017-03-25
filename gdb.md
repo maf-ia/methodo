@@ -43,3 +43,9 @@ print /a $REG 	: 	affiche le contenu du registre REG sous forme d'adresse
 
 
 set $pc=...
+
+#### Variables environnement
+
+info variable environ
+
+x/s *((char **)environ)

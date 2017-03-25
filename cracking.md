@@ -16,6 +16,22 @@
 ### Assembleur
 Référentiel des opcodes (notamment x86) : [www.sandpile.org/x86/](http://www.sandpile.org/x86/)
 
+- Commande call 0x...
+push eip (next inst pour le retour)
+eip = 0x...
+
+- test   %eax,%eax : compare si vaut 0
+
+- Commande pop :
+Lit à l'adresse esp puis increment esp
+
+- Commande "leave":
+mov esp,ebp  (copie ebp dans esp)
+pop ebp
+
+- Commande ret:
+pop eip
+
 ### Cracking de binaires
 
 - file xxx
@@ -39,8 +55,6 @@ Pour les strip file :(gdb) file info -> donne l'entry point, il suffit de faire 
 Pas de disassemble mais x/14i $pc (pour avoir 14 lignes instructions)
 Ensuite, le push qui precede call   80483ec <__libc_start_main@plt> (initialisation lib C) est le pointeur vers le vrai début
 
-ASM
-test   %eax,%eax : compare si vaut 0
 
 Utiliser readelf pour decouvrir les segments
 ex: readelf -a <myprog> | grep strcpy

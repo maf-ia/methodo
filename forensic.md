@@ -5,17 +5,26 @@
 
 ## Forensic
 
-testdisk : pour analyser une image disque et retrouver des fichiers perdus par exemple
+- testdisk : pour analyser une image disque et retrouver des fichiers perdus par exemple
+- foremost : retrouve les fichiers effaces d'une image
+- extundelete : specialise pour les partitions ext3 et ext4
+- binwalk : recherche d'images binaires et exe intégrés
+- autospy : existe sous windows (executable) ou linux (accessible via site web en local...). Les dernières versions sur la même image ne semble pas être analysées exactement de la même manière
 
-foremost : retrouve les fichiers effaces d'une image
 
-extundelete : specialise pour les partitions ext3 et ext4
+### Volatility
 
-binwalk : recherche d'images binaires et exe intégrés
+- volatility  -f dumpfile imageinfo
+- volatility -f dumpfile --profile=Win7SP1x86 envars
+- volatility -f dumpfile --profile=Win7SP1x86 psscan
+- volatility -f dumpfile --profile=Win7SP1x86 hivelist
+- volatility -f dumpfile --profile=Win7SP1x86 cmdscan
+- volatility -f dumpfile --profile=Win7SP1x86 consoles
+- volatility -f dumpfile --profile=Win7SP1x86 hashdump : retourne les hash ntlm et lm
 
-autospy : existe sous windows (executable) ou linux (accessible via site web en local...). Les dernières versions sur la même image ne semble pas être analysées exactement de la même manière
-
-www.extractpdf.com : extrait certaines données des pdf... Les outilfs $pdfto... fonctionnent aussi
+### Créer une cle usb bootable
+(sudo) unetbootin 
+Choisir son iso (ou sa distrib) et suivre les instructions
 
 ### Forensic outlook
 - Avec autopsy
@@ -24,22 +33,15 @@ www.extractpdf.com : extrait certaines données des pdf... Les outilfs $pdfto...
 - Encase (payant)
 - PST viewer PRO (version eval...)
 
-### Volatility
-volatility  -f dumpfile imageinfo
-volatility -f dumpfile --profile=Win7SP1x86 envars
-volatility -f dumpfile --profile=Win7SP1x86 psscan
-volatility -f dumpfile --profile=Win7SP1x86 hivelist
-volatility -f dumpfile --profile=Win7SP1x86 cmdscan
-volatility -f dumpfile --profile=Win7SP1x86 consoles
-volatility -f dumpfile --profile=Win7SP1x86 hashdump : retourne les hash ntlm et lm
-
-### Créer une cle usb bootable
-(sudo) unetbootin 
-Choisir son iso (ou sa distrib) et suivre les instructions
+### Outils pdf
+- www.extractpdf.com : extrait certaines données des pdf... 
+- Les outilfs $pdfto... fonctionnent aussi
 
 ### Autres outils
 
 - [bstrings](http://binaryforay.blogspot.fr/) (sorte de strings pour win)
+- ewftools : outils pour manipuler les fichiers images (mémoire, disque...) créés par EnCase
+- bmc-tools : outil pour retrouver les images du caches RDP (conection bureau à distance)
 
 
 
