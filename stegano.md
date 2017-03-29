@@ -6,17 +6,19 @@
 ## Stegano
 
 ### Analyse basique 
--file filename (vérification type de fichier)
--strings filename (chaines en clair contenues... on peut imposer un nombre minimal de caractères)
--hachoir-metadata filename (il existe aussi d'autres exif tools)
--hachoir-subfile filename ==> détecte s'il y a des fichiers d'inclus/caché à l'intérieur
+- file filename (vérification type de fichier)
+- strings filename (chaines en clair contenues... on peut imposer un nombre minimal de caractères)
+- hachoir-metadata filename (il existe aussi d'autres exif tools)
+- hachoir-subfile filename ==> détecte s'il y a des fichiers d'inclus/caché à l'intérieur
 
 ### Textes
-- Début (lettre ou mot) de mot, début de ligne, début de phrase
+- Début (lettre ou mot) de mot, début de ligne, début de phrase, etc
+- Si le texte fait partie d'une image, certains signes (ponctuation ou "traces" sur le fond peuvent permettre de sélectionner certaines lettres
 - Tous les "n" lettres ou tous les "n" mots
 - Conserver les majuscules
 - Alphabet bilitère de Lord Bacon. Ex: 
 - Espaces entre les mots (surtout sur du html -> regarder la source)
+- Utilisation d'homoglyphes, ie le fait d’écrire un message en unicode avec des caractères de code différents mais dont le rendu est très proche (différents “e”, espaces…). On peut trouver sur [http://holloway.co.nz/steg/](http://holloway.co.nz/steg/) un algo pour cacher/lire les messages sur ce système
 
 ### Images 
 - Zoomer chaque partie
@@ -30,9 +32,10 @@
 - LSB, plans couleur (stegsolve, steganabara pour une première approche, sinon outil maison).
 - Pour le LSB utiliser zsteg : "zsteg imagefile" et sinon "zsteg imagefile -o ALL"
 - Si l'image contient un texte, regarder si certaines lettres (ou mots) ne sont pas marqués (auquel cas les conserver uniquement)
-- Extraire (par exemple pour les jpg) le thumbnail et l'examiner (voire le thumbnail du thumbnail...). Utiliser par exemple exiftool: http://owl.phy.queensu.ca/~phil/exiftool/examples.html. Ou encore  "$exif2 l_image_de_base ­et le_nom_de_la_miniature_a_extraireegarder la vignette extraite". Peut aussi se faire avec hachoir-urwid
+- Extraire (par exemple pour les jpg) le thumbnail et l'examiner (voire le thumbnail du thumbnail...). Utiliser par exemple exiftool: [http://owl.phy.queensu.ca/~phil/exiftool/examples.html](http://owl.phy.queensu.ca/~phil/exiftool/examples.html) : "exiftool -b -ThumbnailImage image.jpg > thumb.jpg". Ou encore  "$exif2 l_image_de_base ­et le_nom_de_la_miniature_a_extraireegarder la vignette extraite". Peut aussi se faire avec hachoir-urwid
 - Si c'est un png, regarder s'il n'y a pas des chunks inutilisés (qui contiendraient un autre fichier)
 - Si c'est un bmp (par exemple), regarder si la taille de l'image correspond à ce qui est indiqué dans le header (x*y*nbc couleurs). Le header a p-e ete trafique pour masquer une partie de l'image
+- L'image peut avoir été générée par un programme depuis un mot, comme par exemple le langage piet
 
 ### Sons
 - Regarder avec audacity pour séparer les canaux
