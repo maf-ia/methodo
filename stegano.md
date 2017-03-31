@@ -22,6 +22,7 @@
 
 ### Images 
 - Zoomer chaque partie
+- Il faut parfois redécouper et recomposer des morceaux d'image, façon puzzle
 - Est-ce un autostéréogramme ? (stegsolve peut aider à les lire)
 - Jouer sur la luminosité et le contratse
 - Jouer sur les seuils, filtrer

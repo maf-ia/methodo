@@ -10,6 +10,7 @@
 - Carré de Polybe : coordonnées dans grille 5x5 en général mais on peut imaginer 6x6
 - Chiffre des Nihilistes : surchiffrement du carré avec une clé à additionner, finalement pas beaucoup plus complexe
 - Table périodique des éléments
+- Décomposer en facteurs premier et récupérer les facteurs ou les exposants pour en déduire les lettres ou les codes ascii...
 
 
 ## Composés de lettres uniquement

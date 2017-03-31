@@ -90,6 +90,12 @@ for i in `seq 100 10 600`; do echo "Tentative $i"; ./exploit $i 120; done
     edb
     IDA
 
+#### Applications Windows
+
+##### .Net
+
+Il est possible d'utiliser ILSpy ou dotPeek (chez JetBrains) ou .NetReflector (devenu payant, il faut retrouver une vieille version mais du coup n'a pas évolué)
+    
 #### [Shellcode](shellcode.html)
     
     
