@@ -14,7 +14,14 @@
 
 ### Volatility
 
+#### Generalites
+
+- Ajouter des plugins : $volatility --plugins=dir1,dir2 ...
+- Ajouter des profiles : Dans plugins/overlays/Linux ... ou avec l'option plugins
 - volatility  -f dumpfile imageinfo
+
+#### Volatilty Windows
+
 - volatility -f dumpfile --profile=Win7SP1x86 envars
 - volatility -f dumpfile --profile=Win7SP1x86 psscan
 - volatility -f dumpfile --profile=Win7SP1x86 hivelist
@@ -22,9 +29,16 @@
 - volatility -f dumpfile --profile=Win7SP1x86 consoles
 - volatility -f dumpfile --profile=Win7SP1x86 hashdump : retourne les hash ntlm et lm
 
+#### Volatility Linux
+
+- volatility -f dumpfile --profile=xxx linux_cpuinfo
+- volatility -f dumpfile --profile=xxx linux_psaux
+- volatility -f dumpfile --profile=xxx linux_...
+
 ### Créer une cle usb bootable
-(sudo) unetbootin 
-Choisir son iso (ou sa distrib) et suivre les instructions
+
+- (sudo) unetbootin 
+- Choisir son iso (ou sa distrib) et suivre les instructions
 
 ### Forensic outlook
 - Avec autopsy
