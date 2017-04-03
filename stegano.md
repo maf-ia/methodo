@@ -23,7 +23,6 @@
 ### Images 
 - Zoomer chaque partie
 - Il faut parfois redécouper et recomposer des morceaux d'image, façon puzzle
-- Est-ce un autostéréogramme ? (stegsolve peut aider à les lire)
 - Jouer sur la luminosité et le contratse
 - Jouer sur les seuils, filtrer
 - Si c'est un gif, ouvrir avec gimp par exemple pour voir toutes les images de l'animation
@@ -37,6 +36,11 @@
 - Si c'est un png, regarder s'il n'y a pas des chunks inutilisés (qui contiendraient un autre fichier)
 - Si c'est un bmp (par exemple), regarder si la taille de l'image correspond à ce qui est indiqué dans le header (x*y*nbc couleurs). Le header a p-e ete trafique pour masquer une partie de l'image
 - L'image peut avoir été générée par un programme depuis un mot, comme par exemple le langage piet
+
+#### Image brouillée
+- Autostéréogramme (utiliser stegsolve ?)
+- Générée depuis un son ? (utiliser audacity et ses différents imports raw))
+- Algorithme de type catmap (cf par exemple Arnold's Cat Map mais il y en a plusieurs autres) : c'est une transformation qui semble transformer l'image en random mais si on l'applique suffisamment de fois on revient sur l'image d'origine)
 
 ### Sons
 - Regarder avec audacity pour séparer les canaux
