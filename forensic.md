@@ -9,6 +9,10 @@
 - foremost : retrouve les fichiers effaces d'une image
 - extundelete : specialise pour les partitions ext3 et ext4
 - binwalk : recherche d'images binaires et exe intégrés
+    Exemple pour extraire que les jpg : 
+        $binwalk --dd='jpeg:jpg' file.bin
+    Tout extraire:
+        $ binwalk --dd='.*' file.bin
 - autospy : existe sous windows (executable) ou linux (accessible via site web en local...). Les dernières versions sur la même image ne semble pas être analysées exactement de la même manière
 
 
