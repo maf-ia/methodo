@@ -7,17 +7,7 @@
 - Numéro de la lettre dans l'alphabet
 - Code ascii
 - Lettre du clavier téléphonique : soit répétée autant que nécessaire, soit juste une valeur pour chaque lettre d'un groupe (plus dur)
-- Carré de Polybe : coordonnées dans grille 5x5 en général mais on peut imaginer 6x6
-- Chiffre des Nihilistes : surchiffrement du carré avec une clé à additionner, finalement pas beaucoup plus complexe
-- Table périodique des éléments
 - Décomposer en facteurs premier et récupérer les facteurs ou les exposants pour en déduire les lettres ou les codes ascii...
-
-
-## Composés de lettres uniquement
-- Playfair (surtout si regroupé par 2)
-- Substitution
-- Railfence
-- Vernam
 
 
 
@@ -31,6 +21,16 @@
 - Atbash (chiffre miroir)
 - Albam (ROT13)
 - Atbah
+- ADFGX puis ADFGVX
+- AMSCO
+- Affine (paramètres a et b)
+
+#### Code composé uniquement de lettres
+- Table périodique des éléments
+- Playfair (surtout si regroupé par 2)
+- Substitution
+- Railfence / ZigZag
+- Vernam
 
 #### Code composé presque uniquement de lettres
 
@@ -41,6 +41,8 @@
 
 - Carré de Polybe : coordonnées dans grille 5x5 en général mais on peut imaginer 6x6
 - Chiffre des nihilistes : surchiffrement du carré avec une clé à additionner, finalement pas beaucoup plus complexe
+- Cadran de l'armée mexicaine
+- Cadran chiffrant d'Alberti
 
 #### Code composé uniquement de chiffres et lettres hexa
 
@@ -55,4 +57,15 @@
 
 - Notamment s'ils semblent totalement aléatoires et variés, il pet s'agir d'UUENCODE (encore plus si encadré par begin 644 / end). Il peut s'agir aussi d'autres encodages.
 - Décalage de type Cesar mais sur la table ascii
+
+#### Composés de symboles
+Le plus simple est souvent de chercher sur Google, il s'agit souvent d'une correspondance lettre-symbole simple, en voici quelques uns :
+- Alphabet d'Arthur et les Minimoys
+- Alphabet Ogham (principalement des traits - origine médiévale celtique)
+- Alphabet Pokemon Zarbi (on peut reconnaître les lettres dans les formes de ce pokemon)
+
+#### Autres
+- Texte latin incompréhensible : Ave Maria de Trithème : à chaque lettre correspond 2 mots latins (on en choisi un parmi eux)
+
+
 
