@@ -41,6 +41,10 @@ sage: message = pow(chiffre,d,n)
 - Utiliser msieve ou yafu (cf outils sur la page crypto)
 - Avec sage (petites valeurs) : p,q = factor(n)
 
+### Oracle de déchiffrement
+
+Si on possède un oracle de déchiffrement (hors le message à trouver), on peut calculer cb = 2**e [n]. On demande alors à déchiffrer cb.c et on divise par 2 le résultat.
+
 ### Clés privées partiellement partagées
 
 Utiliser par exemple "sage" (extension python pour les calculs mathématiques):
