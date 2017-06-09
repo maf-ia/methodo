@@ -90,6 +90,9 @@ for i in `seq 100 10 600`; do echo "Tentative $i"; ./exploit $i 120; done
     edb
     IDA
 
+Il existe d'autres disassembler, notamment à inclure dans du code python : capstone ou encore distorm3
+keystone peut etre utilise pour assembler
+    
 #### Applications Windows
 
 ##### .Net
