@@ -36,6 +36,7 @@
 - Si c'est un png, regarder s'il n'y a pas des chunks inutilisés (qui contiendraient un autre fichier)
 - Si c'est un bmp (par exemple), regarder si la taille de l'image correspond à ce qui est indiqué dans le header (x*y*nbc couleurs). Le header a p-e ete trafique pour masquer une partie de l'image
 - L'image peut avoir été générée par un programme depuis un mot, comme par exemple le langage piet
+- Retrouver sur le web (google image ou https://www.tineye.com/) l'image originale pour faire un diff
 
 #### Image brouillée
 - Autostéréogramme (utiliser stegsolve ?)
