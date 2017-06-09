@@ -62,5 +62,8 @@ Outre le bf facile à coder, on peut utiliser xortool.py pour détecter les tail
 
 
 
+#### hash
+Il existe hashdata (gem install hashdata) qui permet d'identifier les types de hash
+
 
 
