@@ -38,6 +38,8 @@ Mettre -o xxx pour un fichier de sortie...
 * Autre possibilite, non encore testee :
 aapt d xmltree apk_file_name res/layout/activity_main.xml
 (can be found in android-sdk-dir/build-tools)
+ou plus simplement :
+aapt l -a toto.apk
 
 * ClassyShark
 Cet outil permet d'analyser les apk (avec GUI), et notamment les AndroidManifest.xml
