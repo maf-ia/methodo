@@ -32,6 +32,9 @@
 - volatility -f dumpfile --profile=Win7SP1x86 cmdscan
 - volatility -f dumpfile --profile=Win7SP1x86 consoles
 - volatility -f dumpfile --profile=Win7SP1x86 hashdump : retourne les hash ntlm et lm
+- volatility -f dumpfile --profile=Win7SP1x86 netscan  : les connections réseau
+- volatility -f dumpfile --profile=Win7SP1x86 filescan  : les fichiers...
+- volatility -f dumpfile --profile=Win7SP1x86 dumpfiles -Q <adr filescan> -D ./ : extraire un fichier
 
 #### Volatility Linux
 
