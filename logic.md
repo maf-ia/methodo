@@ -29,3 +29,5 @@ Il existe notamment golly comme simulateur, qui propose n variantes, on peut hoo
 - Associer les couleurs
 - Nombre romains
 - Lampe UV
+- Certaines lettres peuvent se confondre avec des chiffres et vice-versa (éventuellement en lisant à l'envers)
+- Pour associer un chiffre à un symbole, il faut parfois compter combien de fois on trouve ce symbole dans la piece (ex: 9 boucliers accrochés au mur...)
