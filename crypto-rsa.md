@@ -79,7 +79,7 @@ Utiliser par exemple "sage" (extension python pour les calculs mathématiques):
     sage: test_encrypted = pow(test_message,e,n)
     sage: found = False
           for i in xrange(len(c_fracs)):
-            if pow(test_encryted,c_fracs[i].denom(),n) == test_message:
+            if pow(test_encrypted,c_fracs[i].denom(),n) == test_message:
                 d = c_fracs[i].denom()
                 found = True
                 break
