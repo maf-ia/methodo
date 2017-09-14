@@ -123,6 +123,9 @@ J'ai trouvé xlcrack qui a fonctionné
 ### Cracking Documents
 Il y a une macro OpenOffice qui fait une attaque par dictionnaire : OOoPasswordCracker
 
+### Cracking PDF
+Il existe pdfcrack (par exemple attaque par dictionaire)
+
 ### Cracking Flash
 J'utilise ffdec qui permet d'afficher les ressources et codes
 
