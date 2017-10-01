@@ -64,6 +64,10 @@ Le plus simple est souvent de chercher sur Google, il s'agit souvent d'une corre
 - Alphabet Ogham (principalement des traits - origine médiévale celtique)
 - Alphabet Pokemon Zarbi (on peut reconnaître les lettres dans les formes de ce pokemon)
 
+Il est aussi possible que les symboles désignent du binaire ou un autre encodage.
+Il faut parfois détecter une spécificité du symbole (nombre de boucles, nombre de traits, d'angles...).
+Il est aussi possible qu'il y ait plusieurs symboles unitaires pour composer ces symboles (rond, carré, triangle...) et qu'il faille ne considérer ces symboles qu'un à un et regarder la forme que cela donne (juste les carrés puis juste les ronds... chacun donnant une lettre ou un chiffre).
+
 #### Autres
 - Texte latin incompréhensible : Ave Maria de Trithème : à chaque lettre correspond 2 mots latins (on en choisi un parmi eux)
 
