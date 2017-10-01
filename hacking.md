@@ -16,6 +16,7 @@
 - La présente du répertoire .git/ ou .svn... ou même /git
 - [XSS injection](xss.html)
 - XXE : un peu comme XSS mais grace aux entités et aux dtd. A noter qu'on peut faire des XXE permettant d'envoyer le résultat avant la fin de la page.
+- XSL : il est possible de faire des choses sympa si on peut modifier le xsl : connaître le moteur xsl et sa version, dans certains cas injecter des commandes, lire des documents choisis (ou en partie), voire même écrire.
 - Injection sql (blind, différents moteurs, time attack, tables systèmes)
 - Injection xpath (cf sql)
 - LFI : upload de fichier (mime, extension, php dans fichier, null byte dans nom) + moyen executer
@@ -27,7 +28,7 @@
 - Fichiers/répertoire d'install
 - CRLF : permet de leurrer utilisateur, ou mailer
 - PHP : register globals (pour les var non initialisées) - vieilles versions
-- [PHP filters](phpwrappers.html) : affiche contenu des fichiers php...
+- [PHP wrappers](phpwrappers.html) : affiche contenu des fichiers php...
 
 ### Les outils
 1. md5sum : Pour générer la somme md5. Ex: echo bob | md5sum
