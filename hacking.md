@@ -11,6 +11,7 @@
 - Décoder le fonctionnement du javascript
 - Tester les user/pwd triviaux. Liste : 
 - Fichiers backup (~, bak, old, sav)
+- Regarder si un fichier robots.txt est présent
 - Fichiers autogénérés comme .pyc si site en python
 - La présence d'un répertoire de livraison
 - La présente du répertoire .git/ ou .svn... ou même /git
