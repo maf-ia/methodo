@@ -24,14 +24,20 @@
 1. Par dico 
 fcrackzip -v -D -u -p ../../resources/rockyou.txt file-0002.zip 
 
+```
 Existe aussi des dicos dans : ll /usr/share/dict/
 -rw-r--r--   1 root root  938848 oct.  23  2011 american-english
 -rw-r--r--   1 root root  938969 oct.  23  2011 british-english
 -rw-r--r--   1 root root  477238 mars  23 16:42 cracklib-small
 -rw-r--r--   1 root root 1542061 avril 30  2012 french
+```
 
 2. Par bruteforce
+
+Option : -b
+
 Méthodes : -c aA1 
+
 Longueur : -l 1-4 (par exemple)
 
 #### hashcat / cudahashcat / oclhashcat
@@ -46,24 +52,27 @@ $ john xxx
 [Doc plus complete](crypto-john.html)
 
 #### msieve
-Pour décomposer des (assez) grands nombres en facteurs premiers. Peut utiliser CUDA
+Pour décomposer des (assez) grands nombres en facteurs premiers. Peut utiliser CUDA.
+
 $ msieve xxx
+
 => Lire le fichier .log pour la réponse
 
 #### yafu
 Pour décomposer des grands nombres en facteurs premiers.
 La version windows à l'air de mieux fonctionner que la version linux (mais opérationnelle quand même) :
+
 $ yafu
+
 puis:
+
 factor(xxx)
 
 #### Cracker par XOR
 Outre le bf facile à coder, on peut utiliser xortool.py pour détecter les tailles probables, voir attaquer le fichier pour ces tailles
 
-
-
 #### hash
-Il existe hashdata (gem install hashdata) qui permet d'identifier les types de hash
+Il existe notamment hashdata (gem install hashdata) qui permet d'identifier les types de hash
 
 
 
