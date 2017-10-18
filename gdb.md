@@ -3,16 +3,16 @@
 </head>
 [index](index.html) [cracking](cracking.html)
 
-### gdb
+# gdb
+
+## Intro
 
 https://betterexplained.com/articles/debugging-with-gdb/
-
 
 run : lance le programme
 start : commence l'exécution et s'arrête au debut du main si present 
 
 info file : affiche les infos sur le fichier (les différents points entrée et début de section)
-
 
 Pour les strip file :(gdb) file info -> donne l'entry point, il suffit de faire un breakpoin b *0x... puis run
 Pas de disassemble mais x/14i $pc (pour avoir 14 lignes instructions)
@@ -23,14 +23,14 @@ watch * 0x... ==> ajoute une watch sur ecriture memoire (sinon rwatch pour lectu
 Si plein sigtrap : handle SIGTRAP noprint nostop
 
 
---- Afficher code à exécuter ---
+## Afficher code à exécuter
 
 x/14i $pc  => 14 prochaines instructions
 
 Prochaine instruction 'ni'
 
+## Voir registres ---
 
---- Voir registres ---
 info reg 
 
 print /x $REG 	: 	affiche le contenu du registre REG en hexadécimal
@@ -44,7 +44,7 @@ print /a $REG 	: 	affiche le contenu du registre REG sous forme d'adresse
 
 set $pc=...
 
-#### Variables environnement
+## Variables environnement
 
 info variable environ
 
