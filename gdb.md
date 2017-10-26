@@ -23,29 +23,74 @@ watch * 0x... ==> ajoute une watch sur ecriture memoire (sinon rwatch pour lectu
 Si plein sigtrap : handle SIGTRAP noprint nostop
 
 
-## Afficher code à exécuter
+## Suivi de l'exécution
 
-x/14i $pc  => 14 prochaines instructions
+On peut la stopper avec ctrl-c
 
-Prochaine instruction 'ni'
+Si on a les infos, on peut utiliser : (gdb) list pour afficher le code
 
-## Voir registres ---
+Sinon (gdb) x/14i $pc  => 14 prochaines instructions
 
-info reg 
+Modifier l'exécution : (gdb) set $pc=...
 
-print /x $REG 	: 	affiche le contenu du registre REG en hexadécimal
+Pour afficher une chaine : (gdb) x/3s 0x... => Les 3 prochaines chaînes à partir de l'adresse...
 
-print /t $REG 	: 	affiche le contenu du registre REG en binaire
+Prochaine instruction 'ni', prochaine step 'si', modification avec : (gdb) set x = ...
 
-print /c $REG 	: 	affiche le contenu du registre REG sous forme de caractère
+Appeler une fonction existante : (gdb) call toto()
 
-print /a $REG 	: 	affiche le contenu du registre REG sous forme d'adresse
+Retour à l'appelant : (gdb) finish
+
+Pile d'exécution : (gdb) backtrace, changer de stack sur cette pile : (gdb) frame 2
+
+Examiner la stack frame courante : (gdb) info frame / (gdb) info locals / (gdb) info args
+
+## Voir la mémoire...
+
+On peut utiliser print ou x
+
+(gdb) x/x 0x... 	: en hexadécimal
+
+(gdb) x/t 0x... 	: en binaire
+
+(gdb) x/c 0x... 	: sous forme de caractère
+
+(gdb) x/a 0x... 	: sous forme d'adresse
+
+(gdb) x/s 0x... 	: sous forme de chaine (arrêt au \0 suivant)
+
+On peut rajouter un chiffre pour en afficher plusieurs /4c : 4 caractères /2s : 2 strings...
+
+## Variables environnement et registres
+
+(gdb) info variable environ
+
+(gdb) x/s *((char **)environ)
+
+(gdb) info reg 
+
+## Breakpoints
+
+Poser un breakpoint : (gdb) b * 0x8048674
+
+Lister les breakpoints : (gdb) info break / (gdb) i b
+
+Supprimer un break point : (gdb) d break 2 (mettre le numero du breakpoint)
+
+On peut mettre un breakpoint directement sur une fonction ou une méthode : (gdb) break func1 / (gdb) break TestClass::testFunc(int)
+
+Si au lieu de break on utilise tbreak, cela met un breakpoint temporaire (s'arrêtera une fois et sera supprimé)
+
+Il est possible de désactiver un breakpoint : (gdb) disable 2 
+
+Il est possible d'ignorer un breakpoint un certain nombre de fois : (gdb) ignore 2 5
+
+## Watchpoints
+
+Comme des breakpoint, mais sur des variables : watch (écriture), rwatch (lecture) et awatch (lecture/écriture)
+
+## Coredump
+
+Relancer le program avec gdb : >gdb toto.bin puis (gdb) core core
 
 
-set $pc=...
-
-## Variables environnement
-
-info variable environ
-
-x/s *((char **)environ)
