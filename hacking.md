@@ -3,6 +3,20 @@
 </head>
 [index](index.html)
 
+## Hacking machines
+
+### Utilisation de Kali
+
+- Installer une full pour avoir metasploit
+
+- Les wordlists sont dans /usr/share/wordlists
+
+### Recherche vulnerabilités
+
+- Banner grabbing: $nc [ip] [port] : ex donne info sur serveur web.
+
+### [Metasploit](hacking-metasploit.html)
+
 ## Hacking web
 
 ### Les attaques
@@ -32,6 +46,7 @@
 - [PHP wrappers](phpwrappers.html) : affiche contenu des fichiers php...
 
 ### Les outils
+
 1. md5sum : Pour générer la somme md5. Ex: echo bob | md5sum
 
 - python -c "import crypt, getpass, pwd; print crypt.crypt('password', '\$6\$salt\$')"
@@ -70,5 +85,6 @@ Vous voila propriétaire du fichier /etc/shadow !
 Ce qui vous permettra bien évidemment de récupérer l'accès root...
 
 - Manipuler de l'hexa : xxd et hd
-Exemple :
+
+
 
