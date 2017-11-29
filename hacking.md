@@ -8,12 +8,14 @@
 ### Utilisation de Kali
 
 - Installer une full pour avoir metasploit
-
 - Les wordlists sont dans /usr/share/wordlists
 
 ### Recherche vulnerabilités
 
 - Banner grabbing: $nc [ip] [port] : ex donne info sur serveur web.
+- NeXpose (Rapid7), possibilite de sauver le report en xml pour relecture dans msf. Il existe aussi plugin "nexpose" pour msf.
+- Nessus (Tenable Security). Il existe aussi plugin "nessus" pour msf.
+- OpenVAS : Fork Open Source de Nessus (qui est devenu close)
 
 ### [Metasploit](hacking-metasploit.html)
 
@@ -86,5 +88,8 @@ Ce qui vous permettra bien évidemment de récupérer l'accès root...
 
 - Manipuler de l'hexa : xxd et hd
 
+## Hacking imprimantes
+
+Il semble que [PRET](https://github.com/RUB-NDS/PRET) PRinter Exploitation Toolkit (outils pythons) soit pas mal utilisé.
 
 
