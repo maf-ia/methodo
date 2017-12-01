@@ -19,6 +19,10 @@
 
 ### [Attaque RSA](crypto-rsa.html)
 
+### Crypto symétrique
+
+Principe : générer un flot de bits "aléatoire" qui sera utilisé en xor. Par exemple avec LFRS (Linear Feedback Shift Register) ou une combianison de LFRS. Chaque LFRS est caractérisé par un polynôme (pour la rétroaction) qui fait partie de la clé, ainsi que l'état initial. Si L est la longueur du polynôme, connaître 2.L bits de clair permet de retrouver le polynôme grâce à l'algorithme de Berlekamp-Massey.
+
 ### Outils
 #### fcrackzip
 1. Par dico 
