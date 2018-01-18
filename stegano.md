@@ -10,6 +10,7 @@
 - strings filename (chaines en clair contenues... on peut imposer un nombre minimal de caractères)
 - hachoir-metadata filename (il existe aussi d'autres exif tools)
 - hachoir-subfile filename ==> détecte s'il y a des fichiers d'inclus/caché à l'intérieur
+- foremost : peut lui aussi détecter des fichiers inclus dans un autre
 
 ### Textes
 - Début (lettre ou mot) de mot, début de ligne, début de phrase, etc
@@ -37,6 +38,7 @@
 - Si c'est un bmp (par exemple), regarder si la taille de l'image correspond à ce qui est indiqué dans le header (x*y*nbc couleurs). Le header a p-e ete trafique pour masquer une partie de l'image
 - L'image peut avoir été générée par un programme depuis un mot, comme par exemple le langage piet
 - Retrouver sur le web (google image ou https://www.tineye.com/) l'image originale pour faire un diff
+- Sur une épreuve, en convertissant une image jpeg en bmp on a pu lire ensuite un texte dans le bmp... le mécanisme est à creuser
 
 #### Image brouillée
 - Autostéréogramme (utiliser stegsolve ?)
