@@ -56,6 +56,7 @@
 
 ### Outils pdf
 - www.extractpdf.com : extrait certaines données des pdf... 
+- pdfextract : extrait les différents streams d'un pdf
 - Les outilfs $pdfto... fonctionnent aussi
 
 ### Autres outils
