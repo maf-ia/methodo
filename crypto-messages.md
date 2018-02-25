@@ -51,6 +51,11 @@
 
 #### Code composé uniquement de chiffres et lettres (autre)
 
+- Un décalage du mot sur les touches du clavier (tester les directions et différents claviers)
+
+#### Code composé uniquement de chiffres, lettres et ponctuation
+
+- Un décalage du mot sur les touches du clavier (tester les directions et différents claviers)
 
 
 #### Code composé de caractères ascii variés
