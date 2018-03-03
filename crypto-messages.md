@@ -76,6 +76,8 @@ Il est aussi possible qu'il y ait plusieurs symboles unitaires pour composer ces
 
 #### Autres
 - Texte latin incompréhensible : Ave Maria de Trithème : à chaque lettre correspond 2 mots latins (on en choisi un parmi eux)
+- Grille de Cardan : on applique un masque / une grille sur un texte pour faire apparaître les lettres du message
+- Grille tournante : sur un texte sous forme de carré 2n * 2n, on applique une grille 4 fois en la tournant à chaque fois de 90° (n² cases lisibles à chaque fois, cf programme de brute force)
 
 
 
