@@ -57,6 +57,7 @@
 #### Code composé uniquement de chiffres, lettres et ponctuation
 
 - Un décalage du mot sur les touches du clavier (tester les directions et différents claviers)
+- Un changement de clavier, typiquement qwerty <-> dvorak
 
 
 #### Code composé de caractères ascii variés
