@@ -18,14 +18,15 @@
 - Cesar : sur l'alphabet, sur l'ascii
 - Vigenere/Rozier/Gronsfeld
 - Vernam
-- Atbash (chiffre miroir)
+- Atbash (chiffre miroir a<->z, b<->y)
 - Albam (ROT13)
-- Atbah
+- Atbah (substitution reverible a->i, cf grille associée)
 - ADFGX puis ADFGVX
 - AMSCO
 - Affine (paramètres a et b)
 
 #### Code composé uniquement de lettres
+- Cesar, Vigenere, Atbash
 - Table périodique des éléments
 - Playfair (surtout si regroupé par 2)
 - Substitution
