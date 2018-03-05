@@ -22,7 +22,7 @@
 ## Hacking web
 
 ### Les attaques
-1. Regarder le source généré (CTRL+U sur Firefox)
+- Regarder le source généré (CTRL+U sur Firefox)
 - Regarder les autres fichiers chargés (y.c leur code source, notamment pour js et css)
 - Décoder le fonctionnement du javascript
 - Tester les user/pwd triviaux. Liste : 
@@ -44,8 +44,13 @@
 - Directory indexing/traversing - Essayer de deviner les répertoires
 - Fichiers/répertoire d'install
 - CRLF : permet de leurrer utilisateur, ou mailer
+
+### Les attaques PHP
 - PHP : register globals (pour les var non initialisées) - vieilles versions
 - [PHP wrappers](phpwrappers.html) : affiche contenu des fichiers php...
+- Contournement de filtre : la commande chr() peut accepter des valeurs négatives (complément à 256)
+- Passer en argument un array (de type user[]) là où il s'attend à une valeur classique donne parfois des résultats intéressants
+- Les conversions implicites sont une source de faille. Les différentes manières d'écrire des nombres (par exemple forme exponentielle 5.14e18) peut rajouter de la confusion en laissant le champ à 2 interprétations selon le contexte 
 
 ### Les outils
 
