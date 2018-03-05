@@ -3,14 +3,6 @@
 </head>
 [Crypto](crypto.html)
 
-## Composés de chiffres uniquement
-- Numéro de la lettre dans l'alphabet
-- Code ascii
-- Lettre du clavier téléphonique : soit répétée autant que nécessaire, soit juste une valeur pour chaque lettre d'un groupe (plus dur)
-- Décomposer en facteurs premier et récupérer les facteurs ou les exposants pour en déduire les lettres ou les codes ascii...
-
-
-
 ## Generalites
 
 
@@ -44,6 +36,13 @@
 - Chiffre des nihilistes : surchiffrement du carré avec une clé à additionner, finalement pas beaucoup plus complexe
 - Cadran de l'armée mexicaine
 - Cadran chiffrant d'Alberti
+- Numéro de la lettre dans l'alphabet
+- Code ascii
+- Lettre du clavier téléphonique : soit répétée autant que nécessaire, soit juste une valeur pour chaque lettre d'un groupe (plus dur)
+- Décomposer en facteurs premier et récupérer les facteurs ou les exposants pour en déduire les lettres ou les codes ascii...
+- Faire des conversions de base, par exemple la base 36, 52, 62...
+
+
 
 #### Code composé uniquement de chiffres et lettres hexa
 
