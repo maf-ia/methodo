@@ -25,7 +25,7 @@
 ### Images 
 - Zoomer chaque partie
 - Il faut parfois redécouper et recomposer des morceaux d'image, façon puzzle
-- Jouer sur la luminosité et le contratse
+- Jouer sur la luminosité et le contraste, la sélection par couleur stricte (baguette magique gimp) pour détecter les écritures de type blanc sur blanc ou noir sur noir.
 - Jouer sur les seuils, filtrer
 - Regarder les metadata, les commentaires de l'image
 - Editer en hexa et voir s'il n'y a pas des données lisibles (dans les data ou après la fin de l'image par exemple)
