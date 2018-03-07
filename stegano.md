@@ -27,7 +27,8 @@
 - Il faut parfois redécouper et recomposer des morceaux d'image, façon puzzle
 - Jouer sur la luminosité et le contratse
 - Jouer sur les seuils, filtrer
-- Si c'est un gif, ouvrir avec gimp par exemple pour voir toutes les images de l'animation
+- Regarder les metadata, les commentaires de l'image
+- Editer en hexa et voir s'il n'y a pas des données lisibles (dans les data ou après la fin de l'image par exemple)
 - Si des bandes de 2 couleurs : traduire en binaire
 - Regarder la palette de couleur
 - Regarder les valeurs hexa de chaque couleur : conversion en ascii par exemple
@@ -35,6 +36,7 @@
 - Pour le LSB utiliser zsteg : "zsteg imagefile" et sinon "zsteg imagefile -o ALL"
 - Si l'image contient un texte, regarder si certaines lettres (ou mots) ne sont pas marqués (auquel cas les conserver uniquement)
 - Extraire (par exemple pour les jpg) le thumbnail et l'examiner (voire le thumbnail du thumbnail...). Utiliser par exemple exiftool: [http://owl.phy.queensu.ca/~phil/exiftool/examples.html](http://owl.phy.queensu.ca/~phil/exiftool/examples.html) : "exiftool -b -ThumbnailImage image.jpg > thumb.jpg". Ou encore  "$exif2 l_image_de_base ­et le_nom_de_la_miniature_a_extraireegarder la vignette extraite". Peut aussi se faire avec hachoir-urwid
+- Si c'est un gif, ouvrir avec gimp par exemple pour voir toutes les images de l'animation
 - Si c'est un png, regarder s'il n'y a pas des chunks inutilisés (qui contiendraient un autre fichier)
 - Si c'est un bmp (par exemple), regarder si la taille de l'image correspond à ce qui est indiqué dans le header (x*y*nbc couleurs). Le header a p-e ete trafique pour masquer une partie de l'image
 - Si c'est un bmp, il y a des octets de padding à la fin des lignes qui peuvent être utilisés pour cacher de l'info. Il est possible de les extraire avec zsteg

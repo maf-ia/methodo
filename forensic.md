@@ -64,6 +64,7 @@
 - [bstrings](http://binaryforay.blogspot.fr/) (sorte de strings pour win)
 - ewftools : outils pour manipuler les fichiers images (mémoire, disque...) créés par EnCase
 - bmc-tools : outil pour retrouver les images du caches RDP (conection bureau à distance)
+- Parfois le fichier correspond à une image corrompue. Il faut corriger (en regardant le format) ou ajouter simplement le bon header
 
 
 
