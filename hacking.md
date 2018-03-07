@@ -15,7 +15,8 @@
 - Banner grabbing: $nc [ip] [port] : ex donne info sur serveur web.
 - NeXpose (Rapid7), possibilite de sauver le report en xml pour relecture dans msf. Il existe aussi plugin "nexpose" pour msf.
 - Nessus (Tenable Security). Il existe aussi plugin "nessus" pour msf.
-- OpenVAS : Fork Open Source de Nessus (qui est devenu close)
+- OpenVAS : Fork Open Source de Nessus (qui est devenu close) - Installé sur https://127.0.0.1:9392. Se paramètre via openvasmd, par exemple pour reinit le password d'admin:
+    $ openvasmd --user=admin --new-password=letmein
 
 ### [Metasploit](hacking-metasploit.html)
 
