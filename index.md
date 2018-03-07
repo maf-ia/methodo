@@ -1,11 +1,12 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>Methode</title>
 </head>
 
 # Methodo
 
 ## [Hacking](hacking.html)
-Les techniques d'attaque web
+Les techniques d'attaque web et machines
 
 ## [Applicatif](app.html)
 Attaque des applications
