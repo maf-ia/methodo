@@ -22,7 +22,11 @@ Apotres
 Cartes à jouer : as, 2, 3
 
 ### Jeu de la vie
-Il existe notamment golly comme simulateur, qui propose n variantes, on peut hooker ne python, etc...
+Il existe notamment golly comme simulateur, qui propose n variantes, on peut hooker en python, etc...
+
+### Autres jeux
+- Mastermind : algo de knuth...
+- Marienbad : jeu où l'on retire des allumettes... Il existe une stratégie gagnante.
 
 ### Escape Room
 - Bien fouiller : les faux-fonds/double-fond, derriere les poignées, retourner les objets, au niveau des charnières (meme dans coffres)
