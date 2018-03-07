@@ -25,6 +25,8 @@
 ### Les attaques
 1. Regarder le source généré (CTRL+U sur Firefox)
 - Regarder les autres fichiers chargés (y.c leur code source, notamment pour js et css)
+- Lire le header de retour
+- Modification du user-agent ou autres parties header
 - Décoder le fonctionnement du javascript
 - Tester les user/pwd triviaux. Liste : 
 - Fichiers backup (~, bak, old, sav)
@@ -39,8 +41,6 @@
 - Injection xpath (cf sql)
 - LFI : upload de fichier (mime, extension, php dans fichier, null byte dans nom) + moyen executer
 - S'il est possible d'uploader des fichiers compressés (ou au moins .tar) qui seront décompressés : mettre un symlink 
-- Modification du user-agent ou autres parties header
-- Lire aussi le header de retour
 - Modification du cookie
 - Directory indexing/traversing - Essayer de deviner les répertoires
 - Fichiers/répertoire d'install
