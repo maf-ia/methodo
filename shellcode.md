@@ -1,3 +1,9 @@
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>Methode - Shellcode</title>
+</head>
+[index](index.html) [Cracking](cracking.html)
+
 ## Linux/x86 execve /bin/sh shellcode 23 bytes
 
 xor    %eax,%eax

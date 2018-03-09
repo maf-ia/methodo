@@ -1,11 +1,12 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>Methode - Cracking</title>
 </head>
 [index](index.html)
 
 ## Cracking
 
-### exploit
+### Exploit
 
 - pscan : permet d'analyser statiquement du code source pour déceler des failles de sécurité comme les "format strings"
 - flawfinder : analyse statique du code pour la sécurité
@@ -39,31 +40,25 @@ pop eip
 - gdb xxx. [Utilisation de gdb](gdb.html)
 - ltrace xxx : Trace library calls of a given program.
 - strace xxx : trace system calls and signals
-- LD_PRELOAD
+- LD_PRELOAD :
+
 Compiler une lib shared : gcc -shared -fPIC -o fake.so fake.c
 LD_PRELOAD à l'execution permet de preloader de fausse shared lib en remplacement
-
-ex : strace -E LD_PRELOAD=./fake.so ./program
+Exemple:  strace -E LD_PRELOAD=./fake.so ./program
 
 - objdump - display information from object files.
+
 objdump -D ./hackme > out.asm
-(utiliser -d pour une version abregee, sans les data notamment)
+utiliser -d pour une version abregee, sans les data notamment
+Option -M intel ou -M att selon la préférence d'affichage (intel ou AT&T)
 
-decompiler: http://boomerang.sourceforge.net ou http://www.backerstreet.com/rec/rec.htm ??
+- decompiler: http://boomerang.sourceforge.net ou http://www.backerstreet.com/rec/rec.htm ??
 
-Pour les strip file :(gdb) file info -> donne l'entry point, il suffit de faire un breakpoin b *0x... puis run
-Pas de disassemble mais x/14i $pc (pour avoir 14 lignes instructions)
-Ensuite, le push qui precede call   80483ec <__libc_start_main@plt> (initialisation lib C) est le pointeur vers le vrai début
-
-
-Utiliser readelf pour decouvrir les segments
+- Utiliser readelf pour decouvrir les segments
 ex: readelf -a <myprog> | grep strcpy
 
-watch * 0x... ==> ajoute une watch sur ecriture memoire (sinon rwatch pour lecture et awatch pour les 2)
-Si plein sigtrap : handle SIGTRAP noprint nostop
-
 hte -> Navigateur de ELF (installé) - Parfois appelé ht
-readelf...
+
 elfsh, ndisasm et elfgrep ??
 
 
@@ -73,11 +68,6 @@ Connaitre l'adresse printf dans GOT :
 
 
 env -i EGG=`python -c "print '0x....
-
-
-
-Executer une boucle en script :
-for i in `seq 100 10 600`; do echo "Tentative $i"; ./exploit $i 120; done
 
 
     readelf Permet d'afficher différents informations concernant un fichier ELF
@@ -104,7 +94,6 @@ Il est possible d'utiliser ILSpy ou dotPeek (chez JetBrains) ou .NetReflector (d
     
 ### Exploit d'application
 
-#### Détection des failles via source code scanner : rats, flawfinder, pscan
 ####- Format string :
 - %08X : affiche la stack par 4 octets
 - %s : affiche la valeur pointée par l'adresse en mémoire, on peut alterner des %x et %s car si ce que pointe %s est hors zone, ca crashe

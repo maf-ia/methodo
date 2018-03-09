@@ -1,5 +1,6 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>Methode - Metasploit</title>
 </head>
 [Hacking](hacking.html) 
 

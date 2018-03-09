@@ -1,5 +1,6 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>Methode - PHP wrappers</title>
 </head>
 [index](index.html) [Hacking](hacking.html)
 

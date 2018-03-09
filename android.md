@@ -1,5 +1,6 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>Methode - Android</title>
 </head>
 [index](index.html) [cracking](cracking.html)
 

@@ -1,3 +1,9 @@
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>Methode - XSS</title>
+</head>
+[index](index.html) [Hacking](hacking.html)
+
 a| ls  -> 5h6Xsxab.txt
 a|cat 5h6Xsxab.txt
 3dVgsa3v4
