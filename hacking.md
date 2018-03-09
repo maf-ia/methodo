@@ -18,6 +18,7 @@
 - OpenVAS : Fork Open Source de Nessus (qui est devenu close) - Installé sur https://127.0.0.1:9392. Se paramètre via openvasmd, par exemple pour reinit le password d'admin:
     $ openvasmd --user=admin --new-password=letmein
 
+
 ### [Metasploit](hacking-metasploit.html)
 
 ### Exploit linux
@@ -50,6 +51,10 @@ Vous voila propriétaire du fichier /etc/shadow !
 Ce qui vous permettra bien évidemment de récupérer l'accès root...
 
 ## Hacking web
+
+### Recherche de vulnerabilités
+- DirBuster : projet owasp (arrêté) pour bruteforcer l'arborescence d'un site web. Remplacé par ZAP
+- Owasp ZAP (Zed Attack Proxy) - Recherche de vulns sur un site web
 
 ### Les attaques
 - Regarder le source généré (CTRL+U sur Firefox)
