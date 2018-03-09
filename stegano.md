@@ -39,7 +39,7 @@
 - Si c'est un gif, ouvrir avec gimp par exemple pour voir toutes les images de l'animation
 - Si c'est un png, regarder s'il n'y a pas des chunks inutilisés (qui contiendraient un autre fichier)
 - Si c'est un bmp (par exemple), regarder si la taille de l'image correspond à ce qui est indiqué dans le header (x*y*nbc couleurs). Le header a p-e ete trafique pour masquer une partie de l'image
-- Si c'est un bmp, il y a des octets de padding à la fin des lignes qui peuvent être utilisés pour cacher de l'info. Il est possible de les extraire avec zsteg
+- Si c'est un bmp, il y a des octets de padding à la fin des lignes qui peuvent être utilisés pour cacher de l'info. Il est possible de les extraire avec zsteg (zsteg -o All alph1-surprise.bmp -E scanline > toto.bin) ou utiliser paddingBMP.py dans la toolbox
 - Si les couleurs RGB de l'image (png, gif...) sont uniquement composées de 0x00, 0xC0 ou 0xFF, l'image peut avoir été générée par un programme depuis un mot, comme par exemple le langage piet
 - Retrouver sur le web (google image ou https://www.tineye.com/) l'image originale pour faire un diff
 - Sur une épreuve, en convertissant une image png en bmp on a pu lire ensuite un texte dans le bmp... le mécanisme est à creuser
