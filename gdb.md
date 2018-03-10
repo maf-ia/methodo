@@ -94,4 +94,11 @@ Comme des breakpoint, mais sur des variables : watch (écriture), rwatch (lectur
 
 Relancer le program avec gdb : >gdb toto.bin puis (gdb) core core
 
+## Scripts
+
+l'option -x permet de lancer un script de commandes gdb qui vont être exécutées... on peut alors insérer des while, print, etc...
+
+
+
+
 
