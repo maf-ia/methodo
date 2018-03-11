@@ -10,7 +10,7 @@
 
 https://betterexplained.com/articles/debugging-with-gdb/
 
-run : lance le programme
+run : lance le programme (ou simplement "r"). Il est possible de passer des arguments avec "run AAAA"
 start : commence l'exécution et s'arrête au debut du main si present 
 
 info file : affiche les infos sur le fichier (les différents points entrée et début de section)
@@ -68,11 +68,13 @@ On peut rajouter un chiffre pour en afficher plusieurs /4c : 4 caractères /2s :
 
 (gdb) x/s *((char **)environ)
 
-(gdb) info reg 
+(gdb) info reg  ==> peut être abrégé en (gdb) i r
 
 ## Breakpoints
 
 Poser un breakpoint : (gdb) b * 0x8048674
+
+Un breakpoint conditionnel : b * 0x080480b5 if $esi==0x81   (attention, bien mettre ==)
 
 Lister les breakpoints : (gdb) info break / (gdb) i b
 
