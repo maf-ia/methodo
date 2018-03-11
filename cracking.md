@@ -14,6 +14,14 @@
 
 - ROPgadget pour contruire des ROP (script python) : https://github.com/JonathanSalwan/ROPgadget
 
+### Symbolic execution
+
+Permet d'explorer les chemins d'exécution possibles d'un programme informatique à partir des symboles contenus dans son code source. Elle diffère de l’exécution concrète qui ne suit qu'un seul des chemins possibles. Alors que l’exécution concrète met directement à jour les variables en mémoire, l’exécution symbolique enregistre les formules logiques liant les variables entre elles. Le but est d'analyser statiquement un programme pour trouver des bugs ou prouver certaines propriétés du programme. Il s'agit d'une interprétation abstraite d'un programme. 
+Le framework Z3 de microsoft research semble a la pointe. Il y a un outil manticore qui semble l'utiliser (https://github.com/trailofbits/manticore) :
+./manticore --proc 2 ./my_binary
+
+D'autres outils, ciblant différentes target, sont cités sur https://en.wikipedia.org/wiki/Symbolic_execution
+
 ### Assembleur
 Référentiel des opcodes (notamment x86) : [www.sandpile.org/x86/](http://www.sandpile.org/x86/)
 
@@ -33,7 +41,9 @@ pop ebp
 - Commande ret:
 pop eip
 
-### Cracking de binaires
+### Cracking de binaires 
+
+#### Applications Linux
 
 - file xxx
 - strings xxx
@@ -52,7 +62,11 @@ objdump -D ./hackme > out.asm
 utiliser -d pour une version abregee, sans les data notamment
 Option -M intel ou -M att selon la préférence d'affichage (intel ou AT&T)
 
-- decompiler: http://boomerang.sourceforge.net ou http://www.backerstreet.com/rec/rec.htm ??
+- decompiler: 
+
+http://boomerang.sourceforge.net ou http://www.backerstreet.com/rec/rec.htm ??
+
+https://retdec.com
 
 - Utiliser readelf pour decouvrir les segments
 ex: readelf -a <myprog> | grep strcpy
@@ -90,7 +104,12 @@ keystone peut etre utilise pour assembler
 Il est possible d'utiliser ILSpy ou dotPeek (chez JetBrains) ou .NetReflector (devenu payant, il faut retrouver une vieille version mais du coup n'a pas évolué)
     
 #### [Shellcode](shellcode.html)
-    
+ 
+#### Applications Mac
+
+Il existe Hopper Disassembler, une version de démo (limitée à 30 minutes consécutives) disponible sous windows et linux
+Sinon il y a les otools, assez proche des binutils (objdump...) de linux.
+
     
 ### Exploit d'application
 
@@ -101,7 +120,7 @@ Il est possible d'utiliser ILSpy ou dotPeek (chez JetBrains) ou .NetReflector (d
 Generalement si on met suffisamment de %x on arrive à pointer le début de la chaîne qu'on vient d'entrer et donc si on a bien choisi les valeurs, cela permet de pointer où on veut.
 - Si on ne veut pas mettre les premiers %x, on peut utiliser pour le %n : %5$n (saute à la 5ème valeur pointée)
 - %XXXXd. Cela génère un entier de taille XXXX (mais on ne peut pas mettre de valeurs trop grandes)
-- %hn : comme %n mais écrit des valeurs de 2 octets (on doit donc écraser une adresse en 2 fois (en décalat de 2)
+- %hn : comme %n mais écrit des valeurs de 2 octets (on doit donc écraser une adresse en 2 fois (en décalage de 2))
 
 
 ### [Cracking d'appli Android](android.html)
