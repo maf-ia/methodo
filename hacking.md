@@ -87,6 +87,7 @@ Ce qui vous permettra bien évidemment de récupérer l'accès root...
 - PHP : register globals (pour les var non initialisées) - vieilles versions
 - [PHP wrappers](phpwrappers.html) : affiche contenu des fichiers php...
 - Contournement de filtre : la commande chr() peut accepter des valeurs négatives (complément à 256)
+- Contournement de filtre : un preg_replace("/^blabla/"...) peut être trompé par une chaîne commençant par un "\n..."
 - Passer en argument un array (de type user[]) là où il s'attend à une valeur classique donne parfois des résultats intéressants
 - Les conversions implicites sont une source de faille. Les différentes manières d'écrire des nombres (par exemple forme exponentielle 5.14e18) peut rajouter de la confusion en laissant le champ à 2 interprétations selon le contexte 
 
