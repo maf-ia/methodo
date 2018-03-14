@@ -104,6 +104,13 @@ Ce qui vous permettra bien évidemment de récupérer l'accès root...
 - Passer en argument un array (de type user[]) là où il s'attend à une valeur classique donne parfois des résultats intéressants
 - Les conversions implicites sont une source de faille. Les différentes manières d'écrire des nombres (par exemple forme exponentielle 5.14e18) peut rajouter de la confusion en laissant le champ à 2 interprétations selon le contexte 
 
+### Les attaques Perl
+- On peut utiliser des pipes dans un open de perl, par exemple si on appelle un fichier "|cat .passwd"...
+
+### Les attauqes Python
+- S'il y a des imports, on peut modifier le $PYTHONPATH pour regarder d'abord dans /tmp par exemple
+- Jailbreak : utiliser notamment https://docs.python.org/2/library/inspect.html. Par exemple .func_code, .co_code, .co_consts
+
 ### Javascript
 - Il existe des deobfuscator online
 - Il faut parfois faire des replace à la main
