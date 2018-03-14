@@ -19,6 +19,19 @@
 - OpenVAS : Fork Open Source de Nessus (qui est devenu close) - Installé sur https://127.0.0.1:9392. Se paramètre via openvasmd, par exemple pour reinit le password d'admin:
     $ openvasmd --user=admin --new-password=letmein
 
+### Détection intrusion
+
+- who et w : utilisateurs connectés
+- last : dernières connexions
+- lastb : derniers echecs de connexion
+- /var/log/auth.log : plus complet sur différents moyens de connexion
+- history : historique des commandes de l'utilisateur
+- ac (package acct) avec l'option "-dp" : temps de connexion de chaque utilisateur
+- lastcomm (package acct) : dernières commandes exécutées sur le système
+- netstat (-t,-u,-p,-l,-a,-n) : ports réseaux du système
+- lsof : liste des ressources (files, pipes...) en cours d'utilisation...). Option -p pour filtrer sur un processus, -u pour un user
+- Vérifier aussi crontab
+
 
 ### [Metasploit](hacking-metasploit.html)
 
