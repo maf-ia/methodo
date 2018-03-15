@@ -58,6 +58,9 @@
 - Différence LSB entre 2 canaux
 - Sous windows, il existe un (vieil) outil appelé MP3Stego
 
+### Autres fichiers
+- Il est possible de cacher de l'info dans certains fichiers. Par exemple dans des fichiers compressés (zip, rar...) ou avec des chunks (png). Il faut alors reconstruire le header (souvent un CRC à calculer), modifier le type ou certains attributs...
+
 ### Videos
 - Regarder chaque frame
 
