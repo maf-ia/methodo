@@ -112,7 +112,7 @@ Ce qui vous permettra bien évidemment de récupérer l'accès root...
 - Jailbreak : utiliser notamment https://docs.python.org/2/library/inspect.html. Par exemple .func_code, .co_code, .co_consts
 
 ### Javascript
-- Il existe des deobfuscator online
+- Il existe des deobfuscator online. Il existe aussi le jsfuck, du javascript valide écrit uniquement avec les 18 symboles "[]()!+,\"$.:;_{}~=."
 - Il faut parfois faire des replace à la main
 - Attention aux conversions implicites en chaîne ou int selon le contexte
 
