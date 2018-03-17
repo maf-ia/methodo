@@ -44,6 +44,7 @@
 - Si les couleurs RGB de l'image (png, gif...) sont uniquement composées de 0x00, 0xC0 ou 0xFF, l'image peut avoir été générée par un programme depuis un mot, comme par exemple le langage piet
 - Retrouver sur le web (google image ou https://www.tineye.com/) l'image originale pour faire un diff
 - Sur une épreuve, en convertissant une image png en bmp on a pu lire ensuite un texte dans le bmp... le mécanisme est à creuser
+- Notamment sur les images paraissant pixelisées, il y a la technique du "ctrl+a" (fonctionnait directement sous ie6) qui consiste à mélanger 2 images en utilisant un damier (un pizel sur deux en décalant à chauqe ligne). Cf gridImage.py dans la toolbox
 
 #### Image brouillée
 - Autostéréogramme (utiliser l'autostereogram solver de stegsolve ou online http://magiceye.ecksdee.co.uk/)
