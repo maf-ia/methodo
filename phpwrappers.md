@@ -5,6 +5,7 @@
 [index](index.html) [Hacking](hacking.html)
 
 ### PHP Filters
+
 Une faille pas super connue mais dévastatrice, car elle permet de lire du code source php !
 (on peut lire des fichier de config, ou se trouve les identifiants de connexion a la bdd mysql par exemple...)
  
@@ -37,3 +38,5 @@ Luxerails
 data://text/plain;base64,php://filter/read=convert.base64-encode/resource= 
 
 Ex: http://www.xxx.org/includes.php?page=data://text/plain,maf => pour afficher "maf"
+
+http://php.net/manual/fr/wrappers.php
