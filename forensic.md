@@ -43,6 +43,27 @@
 - volatility -f dumpfile --profile=xxx linux_psaux
 - volatility -f dumpfile --profile=xxx linux_...
 
+#### Créer un profil volatility
+
+Le wiki de volatility l’explique plus en détails, mais il s’agit principalement de compiler pour le kernel cible un module kernel fourni par Volatility, avec les symboles de debug, puis de dumper les informations DWARF du module. Il faut donc aussi installer les headers du kernel cible, pour nous permettre de pouvoir compiler le module de Volatility. L’autre partie du profil correspond au System.map du kernel, créé à la compilation du kernel et fourni dans notre .deb de kernel Ubuntu. Au final:
+
+$ apt-get install dwarfdump build-essential linux-headers-generic git
+$ git clone https://github.com/volatilityfoundation/volatility.git
+$ cd volatility/tools/linux
+$ sudo make -C /lib/modules/4.4.0-57-generic/build CONFIG_DEBUG_INFO=y M=$PWD modules
+$ dwarfdump -di ./module.o > module.dwarf
+$ sudo zip Ubuntu1604-4.4.0-57.zip module.dwarf /boot/System.map-4.4.0-57-generic
+
+Le zip « Ubuntu1604-4.4.0-57.zip » que nous venons de créer est donc le profil volatility correspondant à notre dump de RAM. Plaçons-le dans un répertoire « profiles » :
+
+$ mkdir profiles
+$ cp volatility/tools/linux/Ubuntu1604-4.4.0-57.zip profiles/
+
+Reste maintenant à exploiter le dump avec volatility (nous avons au préalable récupéré la version déjà compilée de volatility pour Linux) :
+
+$ ~/volatility_2.6_lin64_standalone --plugins=profiles/ --profile=LinuxUbuntu1604-4.4.0-57x64 -f dump.img --cache linux_pslist
+...
+
 ### Créer une cle usb bootable
 
 - (sudo) unetbootin 
