@@ -26,6 +26,14 @@
 - Railfence / ZigZag
 - Vernam
 
+#### Code composé uniquement de quelques lettres
+
+##### Lettres ACGT ou ACGU
+- Il peut s'agit d'ADN ou d'ARN qui peuvent former des codons et se traduire en acides aminés (qui sont désignés par une lettre ou un trigramme)
+
+##### GA BU ZO MEU
+- Il s'agit de la numération Shadoks
+
 #### Code composé presque uniquement de lettres
 
 - S'il y a en plus des / et à la fin = ou == : il peut s'agir de base64
