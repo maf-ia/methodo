@@ -45,8 +45,27 @@ pop eip
 
 #### Applications Linux
 
-- file xxx
-- strings xxx
+##### Analyse statique
+
+- file Affiche différentes informations sur le fichier ELF
+
+- readelf : Permet d'afficher différents informations concernant un fichier ELF
+
+- dumpelf : Dump toutes les informations sur la structure d'un fichier ELF en équivalent d'une structure en C
+
+- lddtree : Montre l’arbre des dépendances d'un fichier ELF
+
+- checksec : script bash permettant d'afficher les protections (ou pas) d'un binaire : RELRO (relocation read-only, NX (non executable segment), Canary, PIE (position independent executable)...
+
+- objdump
+
+- scanelf
+
+- edb
+
+- IDA
+
+##### Outils
 - gdb xxx. [Utilisation de gdb](gdb.html)
 - ltrace xxx : Trace library calls of a given program.
 - strace xxx : trace system calls and signals
@@ -84,15 +103,7 @@ Connaitre l'adresse printf dans GOT :
 env -i EGG=`python -c "print '0x....
 
 
-    readelf Permet d'afficher différents informations concernant un fichier ELF
-    file Affiche différentes informations sur le fichier ELF
-    dumpelf Dump toutes les informations sur la structure d'un fichier ELF en équivalent d'une structure en C
-    lddtree Montre l’arbre des dépendances d'un fichier ELF
-    objdump
-    scanelf
-    gdb
-    edb
-    IDA
+
 
 Il existe d'autres disassembler, notamment à inclure dans du code python : capstone ou encore distorm3
 keystone peut etre utilise pour assembler
@@ -107,7 +118,7 @@ Il est possible d'utiliser ILSpy ou dotPeek (chez JetBrains) ou .NetReflector (d
  
 #### Applications Mac
 
-Il existe Hopper Disassembler, une version de démo (limitée à 30 minutes consécutives) disponible sous windows et linux
+Il existe Hopper Disassembler, une version de démo (limitée à 30 minutes consécutives) disponible sous windows et linux.
 Sinon il y a les otools, assez proche des binutils (objdump...) de linux.
 
     
