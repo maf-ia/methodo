@@ -24,6 +24,10 @@ irssi
 ### tshark
 > tshark -r stego.pcap -T fields -e tcp.urgent_pointer
 
+### Python
+    import dpkt
+    pcap = dpkt.pcap.Reader(f)
+    parsePcapFile(pcap)
 
 ## Wifi
 
