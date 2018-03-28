@@ -64,11 +64,16 @@ Vous voila propriétaire du fichier /etc/shadow !
 
 Ce qui vous permettra bien évidemment de récupérer l'accès root...
 
+### Exploit windows
+
+L'utilisation de mimikatz permet de retrouver des credentials, par exemple à partir d'un dump mémoire
+
 ## Hacking web
 
 ### Recherche de vulnerabilités
 - DirBuster : projet owasp (arrêté) pour bruteforcer l'arborescence d'un site web. Remplacé par ZAP
 - Owasp ZAP (Zed Attack Proxy) - Recherche de vulns sur un site web
+- Wapiti, nikto...
 
 ### Les attaques
 - Regarder le source généré (CTRL+U sur Firefox)
