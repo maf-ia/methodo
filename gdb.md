@@ -19,7 +19,6 @@ Pour les strip file :(gdb) file info -> donne l'entry point, il suffit de faire 
 Pas de disassemble mais x/14i $pc (pour avoir 14 lignes instructions)
 Ensuite, le push qui precede call   80483ec <__libc_start_main@plt> (initialisation lib C) est le pointeur vers le vrai début
 
-
 watch * 0x... ==> ajoute une watch sur ecriture memoire (sinon rwatch pour lecture et awatch pour les 2)
 Si plein sigtrap : handle SIGTRAP noprint nostop
 
@@ -99,6 +98,11 @@ Relancer le program avec gdb : >gdb toto.bin puis (gdb) core core
 ## Scripts
 
 l'option -x permet de lancer un script de commandes gdb qui vont être exécutées... on peut alors insérer des while, print, etc...
+
+## Amélioration de l'environnement
+Il est possible d'utiliser la commande "layout" pour rajouter des vues sur le code ou les registres
+
+Il existe aussi des extensions python pour agrémenter la ligne de commande (rappel des infos de registre, source, couleurs...), notamment "peda" (https://github.com/longld/peda)
 
 
 
