@@ -62,6 +62,7 @@
 
 ### Autres fichiers
 - Il est possible de cacher de l'info dans certains fichiers. Par exemple dans des fichiers compressés (zip, rar...) ou avec des chunks (png). Il faut alors reconstruire le header (souvent un CRC à calculer), modifier le type ou certains attributs...
+- S'intéresser au format du fichier (son header...) pour voir s'il n'y a pas des différences.
 
 ### Videos
 - Regarder chaque frame. On peut décomposer avec ffmpeg : $ffmpeg -i %06d.jpeg -f avi qqun.avi
