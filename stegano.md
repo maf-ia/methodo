@@ -38,7 +38,7 @@
 - L'image peut cacher une autre par transformée de Fourier, on peut alors utiliser des outils comme http://www.ejectamenta.com/Imaging-Experiments/fourierimagefiltering.html pour faire apparaître.
 - Si l'image contient un texte, regarder si certaines lettres (ou mots) ne sont pas marqués (auquel cas les conserver uniquement)
 - Extraire (par exemple pour les jpg) le thumbnail et l'examiner (voire le thumbnail du thumbnail...). Utiliser par exemple exiftool: [http://owl.phy.queensu.ca/~phil/exiftool/examples.html](http://owl.phy.queensu.ca/~phil/exiftool/examples.html) : "exiftool -b -ThumbnailImage image.jpg > thumb.jpg". Ou encore  "$exif2 l_image_de_base ­et le_nom_de_la_miniature_a_extraireegarder la vignette extraite". Peut aussi se faire avec hachoir-urwid
-- [GIF] Si c'est un gif, ouvrir avec gimp par exemple pour voir toutes les images de l'animation (ou scrtipt de la toolbox)
+- [GIF] Si c'est un gif, ouvrir avec gimp par exemple pour voir toutes les images de l'animation (ou script de la toolbox ou "ffmpeg -i anim.gif img%05d.png")
 - [PNG] Si c'est un png, regarder s'il n'y a pas des chunks inutilisés (qui contiendraient un autre fichier). Il existe sous windows http://entropymine.com/jason/tweakpng/ pour les manipuler, sinon voir scripts de la toolbox
 - Si c'est un bmp (par exemple), regarder si la taille de l'image correspond à ce qui est indiqué dans le header (x*y*nbc couleurs). Le header a p-e ete trafique pour masquer une partie de l'image. 
 - [BMP] Si c'est un bmp, il y a des octets de padding à la fin des lignes qui peuvent être utilisés pour cacher de l'info. Il est possible de les extraire avec zsteg (zsteg -o All alph1-surprise.bmp -E scanline > toto.bin) ou utiliser paddingBMP.py dans la toolbox
