@@ -21,7 +21,7 @@
 - Alphabet bilitère de Lord Bacon. Ex: 
 - Espaces entre les mots (surtout sur du html -> regarder la source)
 - Une (longue) suite de chaînes en base64 ou base32... Il peut s'agir de bits cachés dans le padding (cf toolbox)
-- Utilisation d'homoglyphes, ie le fait d’écrire un message en unicode avec des caractères de code différents mais dont le rendu est très proche (différents “e”, espaces…). On peut trouver sur [http://holloway.co.nz/steg/](http://holloway.co.nz/steg/) un algo pour cacher/lire les messages sur ce système
+- Utilisation d'homoglyphes, ie le fait d’écrire un message en unicode avec des caractères de code différents mais dont le rendu est très proche (différents “e”, espaces…). On peut trouver sur [http://holloway.co.nz/steg/](http://holloway.co.nz/steg/) un algo pour cacher/lire les messages sur ce système. Voir aussi l'article sur zenk ou plus simplement ouvrir ce texte avec Burp Suite Decoder.
 
 ### Images 
 - Zoomer chaque partie
