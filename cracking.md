@@ -6,6 +6,8 @@
 
 ## Cracking
 
+- Récupérer un binaire via scp : $ scp -P port your_username@remotehost.edu:foobar.txt /some/local/directory
+
 ### Exploit
 
 - pscan : permet d'analyser statiquement du code source pour déceler des failles de sécurité comme les "format strings"
