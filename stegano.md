@@ -71,5 +71,7 @@ Il existe des options comme -s 360x288 (size) -r 5 (rate) -an -b 360k ...
 ### Outils
 - Steghide (date de 2003) : cache/extrait pour les formats JPEG, BMP, WAV and AU files. Utilisation pour décoder :
     $steghide extract -sf image.jpg -p passphrase -xf sol.txt
+    
+    Il est aussi possible de le faire online via https://futureboy.us/stegano/
 - outguess : cache/extrait des textes dans des images de type PPM, PNM ou JPEG
 - OpenPuff (windows... non testé)
