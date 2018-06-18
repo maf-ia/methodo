@@ -74,6 +74,7 @@ L'utilisation de mimikatz permet de retrouver des credentials, par exemple à pa
 - DirBuster : projet owasp (arrêté) pour bruteforcer l'arborescence d'un site web. Remplacé par ZAP
 - Owasp ZAP (Zed Attack Proxy) - Recherche de vulns sur un site web
 - Wapiti, nikto...
+- Pour rechercher les répertoires classiques : $dirb http://challenge01.root-me.org/realiste/ch7/ /usr/share/dirb/wordlists/common.txt
 
 ### Les attaques
 - Regarder le source généré (CTRL+U sur Firefox)
