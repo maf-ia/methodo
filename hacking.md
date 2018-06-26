@@ -64,6 +64,11 @@ Vous voila propriétaire du fichier /etc/shadow !
 
 Ce qui vous permettra bien évidemment de récupérer l'accès root...
 
+### Wargame - Elevation de privilege
+
+## Execution de commandes détournées (exploit suid)
+- S'il y a un "tar cvf *" par exemple, il est possible de passer des arguments sous forme de nom de fichiers. Notamment en créants des fichiers appelés --checkpoint=1 --checkpoint-action=exec=sh shell.sh et shell.sh.
+
 ### Exploit windows
 
 L'utilisation de mimikatz permet de retrouver des credentials, par exemple à partir d'un dump mémoire
@@ -95,12 +100,12 @@ L'utilisation de mimikatz permet de retrouver des credentials, par exemple à pa
 - Injection sql (blind, différents moteurs, time attack, tables systèmes)
 - Injection xpath (cf sql)
 - LFI : upload de fichier (mime, extension, php dans fichier, null byte dans nom) + moyen executer
-- S'il est possible d'uploader des fichiers compressés (ou au moins .tar) qui seront décompressés : mettre un symlink 
 - Modification du cookie
 - Directory indexing/traversing - Essayer de deviner les répertoires
 - Fichiers/répertoire d'install
 - CRLF : permet de leurrer utilisateur, ou mailer
 - Utilisation de fiddler ou wireshark pour voir ce qui est vraiment échangé sur le réseau
+- S'il est possible d'uploader des fichiers compressés (ou au moins .tar) qui seront décompressés : mettre un symlink 
 
 ### Les attaques PHP
 - PHP : register globals (pour les var non initialisées) - vieilles versions
@@ -113,7 +118,7 @@ L'utilisation de mimikatz permet de retrouver des credentials, par exemple à pa
 ### Les attaques Perl
 - On peut utiliser des pipes dans un open de perl, par exemple si on appelle un fichier "|cat .passwd"...
 
-### Les attauqes Python
+### Les attaques Python
 - S'il y a des imports, on peut modifier le $PYTHONPATH pour regarder d'abord dans /tmp par exemple
 - Jailbreak : utiliser notamment https://docs.python.org/2/library/inspect.html. Par exemple .func_code, .co_code, .co_consts
 
