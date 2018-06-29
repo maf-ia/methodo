@@ -19,6 +19,12 @@ irssi
 /connect irc.root-me.org
 /join #Root-Me
 
+### Proxy local pour suivre/filtrer/rejouer le réseau
+
+- Wireshark (cf ci-dessous)
+- BurpSuite
+- Zap
+
 ### Wireshark
 
 ### tshark
