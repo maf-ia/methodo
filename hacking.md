@@ -78,6 +78,7 @@ L'utilisation de mimikatz permet de retrouver des credentials, par exemple à pa
 ### Recherche de vulnerabilités
 - DirBuster : projet owasp (arrêté) pour bruteforcer l'arborescence d'un site web. Remplacé par ZAP
 - Owasp ZAP (Zed Attack Proxy) - Recherche de vulns sur un site web
+- BurpSuite : suite d'outils (proxy web, ...)
 - Wapiti, nikto...
 - Pour rechercher les répertoires classiques : $dirb http://challenge01.root-me.org/realiste/ch7/ /usr/share/dirb/wordlists/common.txt
 
@@ -129,6 +130,13 @@ L'utilisation de mimikatz permet de retrouver des credentials, par exemple à pa
 
 ### Les outils
 
+#### Créer un serveur web pour ses attaques
+- Serveur web avec netcat : while true; do nc -l -p 8080 < index.html; done 
+Note: Utiliser en fait nc.traditional au lieu de nc
+- Connaitre son ip, par exemple : http://www.monip.org
+- Pour rendre un répertoire disponible via le web, lancer dans ce répertoire :  "python -m SimpleHTTPServer [port]"
+
+#### Autres
 1. md5sum : Pour générer la somme md5. Ex: echo bob | md5sum
 
 - python -c "import crypt, getpass, pwd; print crypt.crypt('password', '\$6\$salt\$')"
