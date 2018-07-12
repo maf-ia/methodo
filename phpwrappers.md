@@ -31,6 +31,7 @@ Pour l'info : il existe d'autres techniques dans le genre, comme data:// par exe
 Testez de faire :
 Code :
 <?php echo file_get_contents('data://text/plain;base64,KHRhIHByaXMgbGEgcGVpbmUgZGUgZGVjb2RlciBjZSBiYXNlNjQgPyk='); ?>
+Il est même parfois possible de faire "data://text/plain,<?php echo `your command`; ?>"
  
 Résultat : le base64 a été décodé et affiché. Ça peut etre utile dans certaines situations... ;)[/code]
 Luxerails 
