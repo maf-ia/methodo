@@ -26,6 +26,11 @@
 - Railfence / ZigZag
 - Vernam
 
+#### Code composé de 2 symboles
+
+- Essayer le morse (surtour si . et -)
+- Alphabet bilitère (Francis Bacon) : groupe de 5 symboles A/B (ou majuscules/minuscules...)
+
 #### Code composé uniquement de quelques lettres
 
 ##### Lettres ACGT ou ACGU
