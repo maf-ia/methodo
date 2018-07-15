@@ -112,6 +112,8 @@ keystone peut etre utilise pour assembler
     
 #### Applications Windows
 
+Utiliser Process Explorer (de Sysinternals) permet de voir les strings chargées en mémoire (dynamiquement)
+
 ##### .Net
 
 Il est possible d'utiliser ILSpy ou dotPeek (chez JetBrains) ou .NetReflector (devenu payant, il faut retrouver une vieille version mais du coup n'a pas évolué)
