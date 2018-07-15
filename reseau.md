@@ -27,6 +27,9 @@ irssi
 
 ### Wireshark
 
+- Filtrer un stream "tcp.stream eq 23"
+- Lire du https en connaissant la clé : Edit/Preferences -> Protocols/SSM -> "add RSA key"
+
 ### tshark
 > tshark -r stego.pcap -T fields -e tcp.urgent_pointer
 
