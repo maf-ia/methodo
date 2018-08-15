@@ -34,7 +34,7 @@
 - Regarder la palette de couleur
 - Regarder les valeurs hexa de chaque couleur : conversion en ascii par exemple
 - LSB, plans couleur (stegsolve, steganabara pour une première approche, sinon outil maison).
-- Pour le LSB utiliser zsteg : "zsteg imagefile" et sinon "zsteg imagefile -o ALL"
+- Pour le LSB utiliser zsteg : "zsteg imagefile" et sinon "zsteg imagefile -o ALL" [https://github.com/zed-0xff/zsteg](https://github.com/zed-0xff/zsteg)
 - L'image peut cacher une autre par transformée de Fourier, on peut alors utiliser des outils comme http://www.ejectamenta.com/Imaging-Experiments/fourierimagefiltering.html pour faire apparaître.
 - Si l'image contient un texte, regarder si certaines lettres (ou mots) ne sont pas marqués (auquel cas les conserver uniquement)
 - Extraire (par exemple pour les jpg) le thumbnail et l'examiner (voire le thumbnail du thumbnail...). Utiliser par exemple exiftool: [http://owl.phy.queensu.ca/~phil/exiftool/examples.html](http://owl.phy.queensu.ca/~phil/exiftool/examples.html) : "exiftool -b -ThumbnailImage image.jpg > thumb.jpg". Ou encore  "$exif2 l_image_de_base ­et le_nom_de_la_miniature_a_extraireegarder la vignette extraite". Peut aussi se faire avec hachoir-urwid
@@ -49,6 +49,7 @@
 
 #### Image brouillée
 - Autostéréogramme (utiliser l'autostereogram solver de stegsolve ou online http://magiceye.ecksdee.co.uk/)
+- Parfois l'image parait random (genre autostereogram) mais ne l'est pas. On peut utiliser le script detectrandomness.py de la toolbox pour debrouiller.
 - Générée depuis un son ? (utiliser audacity et ses différents imports raw))
 - Algorithme de type catmap (cf par exemple Arnold's Cat Map mais il y en a plusieurs autres) : c'est une transformation qui semble transformer l'image en random mais si on l'applique suffisamment de fois on revient sur l'image d'origine). Cf toolbox
 
@@ -59,6 +60,7 @@
 - Spectrogramme (avec outil sonic-visualiser par exemple) : visuellement cela peut afficher un mot
 - Différence LSB entre 2 canaux
 - Sous windows, il existe un (vieil) outil appelé MP3Stego
+- Steghide fonctionne aussi avec les .wav
 
 ### Autres fichiers
 - Il est possible de cacher de l'info dans certains fichiers. Par exemple dans des fichiers compressés (zip, rar...) ou avec des chunks (png). Il faut alors reconstruire le header (souvent un CRC à calculer), modifier le type ou certains attributs...
