@@ -37,7 +37,7 @@
 - Pour le LSB utiliser zsteg : "zsteg imagefile" et sinon "zsteg imagefile -o ALL" [https://github.com/zed-0xff/zsteg](https://github.com/zed-0xff/zsteg)
 - L'image peut cacher une autre par transformée de Fourier, on peut alors utiliser des outils comme http://www.ejectamenta.com/Imaging-Experiments/fourierimagefiltering.html pour faire apparaître.
 - Si l'image contient un texte, regarder si certaines lettres (ou mots) ne sont pas marqués (auquel cas les conserver uniquement)
-- Extraire (par exemple pour les jpg) le thumbnail et l'examiner (voire le thumbnail du thumbnail...). Utiliser par exemple exiftool: [http://owl.phy.queensu.ca/~phil/exiftool/examples.html](http://owl.phy.queensu.ca/~phil/exiftool/examples.html) : "exiftool -b -ThumbnailImage image.jpg > thumb.jpg". Ou encore  "$exif2 l_image_de_base ­et le_nom_de_la_miniature_a_extraireegarder la vignette extraite". Peut aussi se faire avec hachoir-urwid
+- Extraire (par exemple pour les jpg) le thumbnail et l'examiner (voire le thumbnail du thumbnail...). Utiliser par exemple exiftool: [http://owl.phy.queensu.ca/~phil/exiftool/examples.html](http://owl.phy.queensu.ca/~phil/exiftool/examples.html) : "exiftool -b -ThumbnailImage image.jpg > thumb.jpg". Ou encore  "$exif2 l_image_de_base ­et le_nom_de_la_miniature_a_extraire" puis regarder la vignette extraite. Peut aussi se faire avec hachoir-urwid ou encore online [http://cyber.meme.tips/jpdump/](http://cyber.meme.tips/jpdump/)
 - [GIF] Si c'est un gif, ouvrir avec gimp par exemple pour voir toutes les images de l'animation (ou script de la toolbox ou "ffmpeg -i anim.gif img%05d.png")
 - [PNG] Si c'est un png, regarder s'il n'y a pas des chunks inutilisés (qui contiendraient un autre fichier). Il existe sous windows http://entropymine.com/jason/tweakpng/ pour les manipuler, sinon voir scripts de la toolbox
 - Si c'est un bmp (par exemple), regarder si la taille de l'image correspond à ce qui est indiqué dans le header (x*y*nbc couleurs). Le header a p-e ete trafique pour masquer une partie de l'image. 
@@ -61,6 +61,7 @@
 - Différence LSB entre 2 canaux
 - Sous windows, il existe un (vieil) outil appelé MP3Stego
 - Steghide fonctionne aussi avec les .wav
+- Il peut s'agir de DTMF (sons des claviers de téléphone, ce qui peut se décoder en ligne sur [http://dialabc.com/sound/detect/index.html](http://dialabc.com/sound/detect/index.html) par exemple 
 
 ### Autres fichiers
 - Il est possible de cacher de l'info dans certains fichiers. Par exemple dans des fichiers compressés (zip, rar...) ou avec des chunks (png). Il faut alors reconstruire le header (souvent un CRC à calculer), modifier le type ou certains attributs...
